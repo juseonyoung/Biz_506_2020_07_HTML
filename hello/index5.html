@@ -1,0 +1,81 @@
+<!-- html5 문서가 시작된다는 뜻-->
+<!-- 이 문서는 html5 규격의 hyper text 문서다 라는 것을 선언
+      tag는 모두 소문자로 작성-->
+<!DOCTYPE html> 
+<html lang="ko">
+     <head> <!-- head는 설정, setting값, 변수, 환경, 실제 웹에서는 나타나지 않음
+                문서의 특성 등을 지정하는 여러가지 설정값을 포함한다.
+            extension에서 open in browser설치하고 alt+B 누르면 html문서가 바로 출력
+                head태그 안에는 아래 세 코드가 기본적으로 들어간다-->
+                <title>내 홈페이지</title>
+
+                <!--문자 encoding 설정-->
+                <meta charset="UTF-8">
+
+                <meta name="viewport" content='width=device-width, initial-scale=1'>
+                <!-- 화면을 장치의 가로 크기에 맞게 맞춰라, 비율을 1로 맞추기
+                 이 부분을 안쓰면 웹이나 모바일 크기에 안맞게 작게 나옴--> 
+    </head>
+    
+    <body> <!-- 웹브라우저에 보여줄 내용이 작성될 위치
+            본문내용 별도의 태그 없으면 무조건 한줄에 나옴 h2는 헤드라인임 1~6 숫자가 커질수록 숫자 작아짐-->
+        <h1> 나의 홈페이지</h1>
+        <h2> 나의 홈페이지</h2>
+        <h3> 나의 홈페이지</h3>
+        <h4> 나의 홈페이지</h4>
+        <h5> 나의 홈페이지</h5>
+        <h6> 나의 홈페이지</h6>
+        <h7> 나의 홈페이지</h7> <!--h7부터는 무시하고 일반문자크기로 출력-->
+
+        <!--h태그:는 제목을 표시하는 헤드라인, p태그:는 문단을 나누는 표시-->
+        <p>우리는 오늘 HTML5 를 사용하여 웹페이지를 만들고 있다<br/> <!--break은 문단내에서 임의로 줄바꿈시킴 br/ /br br 아무거나 써도 됨-->
+        우리가 만드는 웹페이지는 다양한 웹브라우저에서 정상으로 보여지기를 기대한다.</p><!--auto wrap 화면크기에 맞추어 글자가
+        밖으로 나가지 않고 자동으로 문단내에서 줄바꿈 됨-->
+        <p>우리나라만세</p> <!--강제 wrap기능 가급적 p태그 닫는게 좋음-->
+        <p>대한민국만세</p>
+        <p><a href="https://naver.com" target="_my">네이버 바로가기</a></p> <!--anchor태그 href속성에 주소값을 넣어주면 클릭했을 때 화면을 바꿔라
+        a tag, 링크라고 하며 문자열을 마우스로 클릭했을 때 서버에 요청(request)을 보내라-->
+        <!--target 변수를 넣으면 링크를 새 페이지에서 보여줌-->
+        <p><a href="https://daum.net">다음 바로가기</a></p>
+        <p><a href="https://google.com">구글링</a></p>
+
+        <p><a href="sub/index6.html">Sub의 index6 열기</a></p>
+        <p><img src="다운로드.png" alt="2020이미지"width="100px"></p> <!--alt 태그 접근성을 높혀주기 위한-->
+        <!--100px 개의 점 width height 둘 중 하나만 쓰면 자동으로 비율이 맞춰짐-->
+        <p><img src="https://cdn.eyesmag.com/content/uploads/posts/2019/12/31/change-2020-top50main-b74c4b38-1b44-4a93-8da3-5b2158138763.gif" width="100px"></p>
+
+        <p>
+            <!--a tag의 href:HyperText Reference-->
+            <a href="https://daum.net"> <!-- 이미지를누르면 주소로 이동하도록 함 a태그로 감싸서 문자열 부분에 이미지를 넣으면 됨-->
+            <img src="다운로드.png" alt="2020이미지"width="100px">
+            </a>
+        </p> 
+        <p>
+            <ul> <!--ul태그: unorder List, 순서가 없는 리스트 li항목을 리스트로 보여줌
+                    머리글 기호는 필요에 따라 바꿀 수 있다.-->
+
+                <li>대한민국</li>
+                <!--반복되는 태그는 꺾새 빼고 li*10 이런식으로 쓰면 됨-->
+                <!--태그 사이에 커서 두고 ctrl+alt+shift 동시에 방향키 아래로 내려서 커서를 그룹으로 묶음 esc해서 빠져나가기
+                블럭 다중선택이라 한다-->
+
+                <ol> <!--order List , 순서가 있는 리스트, 순서대로 1234 순번이 매겨짐
+                        기본값은 숫자이며 가나다, abc 순으로도 바꿀 수 있다-->
+                    <li>우리나라 대한민국</li>
+                    <li>우리나라 대한민국</li>
+                    <li>우리나라 대한민국</li>
+    
+                </ol>
+               
+            </ul>
+        </p>
+            <ul>
+               <li><img src="다운로드.png" alt="2020" height="50px"></li>
+               <li><img src="다운로드.png" alt="2020 이미지" height="50px"></li>
+               <li><img src="다운로드.png" alt="2020이미지다" height="50px"></li>
+            </ul>
+    </body>
+      
+
+
+</html>
