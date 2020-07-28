@@ -12,6 +12,24 @@
 * XML : tag에 사용되는 키워드를 임의로 만들 수 있다. 
 * HTML : tag에 사용되는 키워드가 정해진 것을 사용한다. 
 
+
+#### HTML 의 박스모델
+* HTML의 tag를 박스모델로 분류하면 bolck, inline으로 분류 할 수 있다. 
+* block : contents의 길이에 관계없이 화면에 왼쪽끝에서부터 오른쪽끝까지를 영역으로 사용하는 태그이다.
+* Inline : contents의 길이만큼만 영역으로 사용하는 태그
+ inline은 여러가지 태그로 묶인 content가 가로 방향으로 나열되어 표현 될 수 있다. 
+ inline tag는 문자열 중간에 있는 단어들의 모양, 색깔 등을 바꾸는 용도부터 다양한 용도로 사용이 된다. 
+
+
+ ### HTML의 Selector
+ * tag : HTML에서 사용하는 모든 tag를 selector Tag라고 한다.
+ * 선택자(selector) : HTML 문서 내에서는 tag라고 불리우는 요소들이 style 과 관련된 부분이 적용되면 tag selector라고 부른다.
+ * css(Cascading Style Sheet)를 사용하여 HTML문서에 디자인적인 효과를 입히는 기술! 
+
+
+
+
+
 #### index.html
 * 일반적으로 홈페이지 또는 웹페이지라고 부르는 Browser를 통해서 접근하는 프로젝트에서 제일 먼저 만나게 되는 파일이다.
 * index page, Landing page, Parking page 등으로 부른다.

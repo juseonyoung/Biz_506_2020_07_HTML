@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <title>TABLE</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+   
+</head>
+<body>
+    <h3>Table tag를 이용한 데이터 리스트 표시</h3>
+    <p>Table은 row, col을 지정하여 표 형식으로<br/> 
+        데이터 리스트 등을 표현하는 layout<br/>
+        Table에는 제목(칼럼,col)을 표시하는 thead가 있고, 내용(리스트,row)을 표시하는 tbody가 있다. 
+        보통 간편하게 표를 만들 때는 thead, tbody는 생략을 해도 된다. 
+        <ol>
+            
+            <li>Table의 구조를 만들 때는 먼저 몇개의 row가 존재하는지를 지정한다. </li>
+            <li>지정된 row를 데이터가 표현하는 칼럼으로 나눈다.</li>
+            <li>row를 나누는 칼럼은 th, td tag를 사용하여 나눈다.</li>
+            <li>th, td 칼럼 사이에는 표시하고자 하는 데이터를 추가해준다.</li>
+            <li> th태그 : 테이블 헤드라인 으로 제목에 해당하는 굵은 글씨체</li>
+            <li> td태그 : 테이블 데이터로써 데이터들에 해당하는 일반 글씨체</li>
+            <li>많은 데이터를 표시하고자 할 때는 tr td.. tr 형식으로 계속해서 tr을 추가한다</li>
+
+            <li>border 속성: 테이블의 테두리 선 지정</li>
+            <li>width : 화면에 대하여 테이블을 그리는 폭을 지정, 퍼센테이지나 픽셀로 써도 됨</li>
+            <li>width : %로 지정하면 화면 폭의 비율, px로 지정하면 고정크기</li>
+            <li>colspan : td의 개수가 다른 row와 다를 경우 td를 합하여 1개의 td로 만들기</li>
+            <li>rowspan : td의 개수가 다른 row와 다를 경우 td를 합하여 1개의 td로 만들기</li>
+        </ol>
+        
+    </p>   
+    
+    <table border="3" width ="30%"> <!--border 표에 테두리를 쳐줌 숫자 높을수록 테두리가 굵어진다-->
+            <thead>
+                <tr> <!--th태그 이용해 칼럼 만들기 th쓰면 볼드체 써짐-->
+                    <th>학번</th>
+                    <th>이름</th>
+                    <th>전화번호</th>
+                    <th>주소</th>
+                    <th>학과</th>
+                </tr>
+                
+            </thead>
+            <tbody>
+                <tr> <!--td 태그 써서 내용-->
+                    <td>20001</td>
+                    <td>홍길동</td>
+                    <td>010-111-4110</td>
+                    <td>서울특별시</td>
+                    <td>컴퓨터공학</td>
+                </tr>
+                <tr> <!--td 태그 써서 내용-->
+                    <td>20002</td>
+                    <td>이몽룡</td>
+                    <td>010-222-2222</td>
+                    <td>익산시</td>
+                    <td>정치외교학과</td>
+                </tr>
+
+                <tr> <!--td 태그 써서 내용-->
+                    <td>20003</td>
+                    <td>성춘향</td>
+                    <td>010-333-3333</td>
+                    <td>광주광역시</td>
+                    <td rowspan ="3">법학과</td>
+                </tr>
+
+                <tr> <!--td 태그 써서 내용-->
+                    <td>20004</td>
+                    <td>장녹수</td>
+                    <td>010-444-4444</td>
+                    <td rowspan ="2">한양시</td>
+                </tr>
+
+                <tr> <!--td 태그 써서 내용-->
+                    <td>20005</td>
+                    <td>임꺽정</td>
+                    <td>010-555-5555</td>                   
+                </tr>
+
+                <tr> <!--td 태그 써서 내용-->
+                    <td>20006</td>
+                    <td>시진핑</td>
+                    <td colspan="3">010-666-6666</td>     <!--colspan="3" 3개의 td를 하나로 묶는 셀 병합 효과-->
+                </tr>
+                <tr>
+                    <td>20007</td>
+                    <td colspan="4">
+                        <table border="1">
+                            <tr>
+                                <th>학번</th>
+                                <th>국어</th>
+                                <th>영어</th>
+                                
+                                
+                            </tr>
+                            <tr>
+                                <td>20007</td>
+                                <td>100</td>
+                                <td>90</td>
+                                
+                            </tr>
+                        </table>
+                    </td>
+                </tr>
+
+            </tbody>
+
+    </table> 
+</body>
+</html>
