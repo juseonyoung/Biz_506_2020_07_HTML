@@ -1,91 +1,65 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Project</title>
-
+    <meta charset='utf-8'>
+    <title>Short Navi</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
     <style>
-
-        #header{
-            /*  
-            style 지정할 때 사용하는 단위 px, pt, dp, em, rem 등등..
-            rem(em):
-            box 내부에 문자열 content 있을 때 content 문자열 중에 가장 큰 문자열을 기준으로 배율을 지정한다. 
-
-            */
-           
-            background-position-x: center;
-            background-repeat: no-repeat;
-            background-size: 50% 50%;
+        #header {
             background-color: skyblue;
             color: black;
-            padding: 1.5rem;
+            padding: 3rem;
             text-align: center;
-          
         }
-
         #nav {
-            background-color:palevioletred;
+            background-color: blanchedalmond;
+        }
+        ul {
+            margin: 0;
             text-align: right;
         }
-          
-        ul {
-            margin:0;
-        }
-        
-
         li {
             display: inline-block;
             padding: 5px;
-            background-color: navy;
-            color: white;
+            background-color: blanchedalmond;
+            color: coral;
             cursor: pointer;
-        }
-
-        li:hover{ 
-
-            cursor: pointer;
-        }
-
-        /*
-        text-decoration : anchar tag는 특성상 문자열에 밑줄과 같은 속성이 지정된다
-        이 속성을 모두 없애서 디자인이 흐트러지는 것을 방지할 수 있다.
-        */
-        a {
-            color: white;
             text-decoration: none;
         }
-
+        footer {
+            background-color: violet;
+            text-align: center;
+            padding: 8px;
+            color: black;
+            text-emphasis: inherit;
+            font-weight: 700;
+        }
     </style>
-
 </head>
 <body>
-    <div id="header">
-        <span>
-            <img src ="로고.png" width="300px">
-        </span>
-
-        <h1>로드뷰 서비스</h1>
-        <p>단거리 루트를 알려주는 네비게이션 서비스 입니다</p>
+    <div id = "header">
+        <h3>Short Navi</h3>
     </div>
-
-
     <div id="nav">
         <ul>
-            <li>마이페이지</li>
-            <li>로그인</li>
-            <li>회원가입</li>
-            <li></li>
+            <li><a href="C:\bizwork\workspace\Biz_506_2020_07_HTML\TeamProject\login.html">로그인</a></li>
+            <li><a href="#">회원가입</a></li>
+            <li><a href="#">마이페이지</a></li>
         </ul>
-
     </div>
+    <!-- 지도를 표시할 div 입니다 -->
+    <div id="map" style="width:100%;height:100vh;"></div>
 
-
-    <footer>
-        <address> CopyRight &copy; 평화맨션정류장</address>
-
-    </footer>
-
-</body>
-</html>
+    <script type="text/javascript" src="https://dapi.kakao.com/v2/maps/sdk.js?appkey=c1cd2bfd4f58344ee8fdcd78117aae1e"></script>
+    <script>
+    var mapContainer = document.getElementById('map'), // 지도를 표시할 div 
+        mapOption = { 
+            center: new kakao.maps.LatLng(33.450701, 126.570667), // 지도의 중심좌표
+            level: 3 // 지도의 확대 레벨
+        };
+    
+    // 지도를 표시할 div와  지도 옵션으로  지도를 생성합니다
+    var map = new kakao.maps.Map(mapContainer, mapOption); 
+    </script>
+    </body>
+    </html>
