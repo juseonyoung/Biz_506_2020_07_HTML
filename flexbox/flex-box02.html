@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Page Title</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <style>
+
+        /*
+        flex box의 최대장점! 박스 안에 박스가 포함될 때 가로 세로 방향으로 중앙정렬을 하고 싶을 때 
+        어떠한 형태의 display type보다 쉽게 구현이 가능하다!
+
+        */
+        html,body{
+            height: 100%;
+        }
+
+        section {
+            height: 70%;
+            display: flex;
+            border: 1px solid goldenrod;
+            justify-content: center;
+            align-items: center;
+        }
+
+        div {
+            width: 300px;
+            height: 300px;
+            border: 1px solid palevioletred;
+            text-align: center;
+        
+        }
+
+        div {
+            width: 300px;
+            height: 300px;
+            border: 1px solid palevioletred;
+            text-align: center;
+            margin: 5px ;
+            vertical-align: middle;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+    </style>
+
+</head>
+<body>
+    <section>
+        <div>
+         대한민국</div>
+
+        <div>
+          우리나라만세</div>
+    </section>
+    
+</body>
+</html>

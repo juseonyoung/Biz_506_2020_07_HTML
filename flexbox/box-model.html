@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Page Title</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+   <style>
+       /*
+        DOC에 있는 모든 요소는 들어라
+       */
+
+       *{
+           /*박스의 border size의 크기를 임의로 설정하고자 할 때 박스의 크기가 변하는데 무엇을 기준으로 변화 시키겠느냐??*/
+        box-sizing: content-box; /*이게 기본값*/
+        box-sizing: border-box;
+        margin:0;
+        padding:0;
+        /*마진과 패딩 초기화 시켜서 원하는 값으로 설정이 안되는 경우를 방지*/
+    
+       }
+
+       html,body{
+           height: 100%;
+       }
+
+       body{
+           display: flex;
+           justify-content: center;
+           align-items: center;
+       }
+
+       section {
+
+        width: 90%;
+        height: 50%;
+        border: 1px solid red;
+        
+       }
+
+       section div{
+            border: 1px solid gold;
+            width: 50%;
+            margin: 10px auto;
+
+       }
+
+       /*
+       div 엘리먼트들 중에서 첫번재 요소에 대하여 .. 
+       */
+       section div:nth-child(1){
+           border: 5px solid red;
+       }
+
+       section div:nth-child(2){
+           border: 10px solid violet;
+       }
+
+
+       section div:nth-child(3){
+           box-sizing: content-box;
+           border: 10px solid yellowgreen;
+       }
+
+
+   </style>
+</head>
+<body>
+   <section>
+        <div>div1</div>
+        <div>div2</div>
+        <div>div3</div>
+        <div>div4</div>
+        <div>div5</div>
+
+   </section> 
+</body>
+</html>

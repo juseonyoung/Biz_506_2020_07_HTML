@@ -1,0 +1,135 @@
+/*
+    html css 코딩을 할 때 width 값은 브라우저의 최대 width값을 기준으로 하여 
+    %값으로 요소(엘리먼트)의 width를 지정할 수 있다. 
+    height 값은 브라우저의 height값과는 전혀 다른 상대를 대상으로 만들어져서 
+    요소들의 height값을 %로 지정할 수 없다. 
+
+    요소들의 height값을 퍼센트로 지정하기 위해서 먼저 html과 body height값을 지정해 주어야 한다. 
+*/
+*{
+
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+html,body {
+    height: 100%;
+}
+
+header {
+        
+    display: flex ;
+    flex-flow:column;
+    justify-content: center;
+    align-items: center;
+    height: 100%; /* 100으로 하면 화면 꽉참*/
+
+    text-align: center;
+    padding: 1.5rem;
+
+    /*아래 세개는 거의 기본값*/
+    background-image: url("../images/스위스.png");
+    background-position-x: center;
+    background-repeat: no-repeat;
+    background-size: 100%;
+
+    background-attachment: fixed;
+    color: white;
+}
+
+#main {
+    height: 100%;
+    background-image: url("../images/목성.jpg");
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-attachment: fixed;
+
+
+}
+
+#button {
+    width: 80%;
+    text-align: right;
+    padding-top: 8px;
+    margin: 0 auto;
+}
+
+/* id값이 button으로 설정된 박스에 소속되어 있는 버튼 태그에만 스타일 지정하자*/
+#button button { 
+    background-color:#6cabdf;
+    color: black;
+  
+    /*   
+    padding, margin에서 많이 사용하는 단위 rem이란
+    내부의 text크기를 1로 하여 비례적으로 적용하는 값이다. 
+    글씨크기 늘려도 자연스럽게 수정됨
+    padding: 8px 16px;이게 기본값 제일 이쁨*/
+    padding: 8px 16px;
+    vertical-align: middle;
+    cursor: pointer;
+
+    /*  transparent : 투명색 
+    호버에서 밑줄 효과 주고자 할 때 
+    위에 border테두리를 없애버려서 그만큼 영역이 늘어나 화면이 흔들리는 현상 막기위해
+    기본 테두리를 투명색으로 입혀 흔들리는 현상 막는다. */
+    border-bottom: 2px solid transparent;
+    transition: all 2s linear;
+}
+
+#button button:hover{
+
+    background-color: hotpink;
+    color: black;
+    border-bottom: 2px solid black;
+}
+
+/*
+margin, padding의 값 지정
+4개의 값 :top부터 시계방향으로 1개씩 지정
+2개의 값: top-bottom, left-right 각각 지정
+10px auto top-bottom은 10으로 주고 좌우는 바깥 박스에 맞춰 자동으로 맞춰라
+안에있는 박스가 정중앙에 오게 됨 blog_body를 좌우 중앙에 정렬하라는 용도
+
+*/
+#blog_body{
+
+    width:80%;
+    border: 1px solid green;
+    margin: 10px auto;
+    background-image: url("images/tree-832079.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    transition: 2s linear;
+}
+
+#blog_body:hover{
+
+    background-image: url("images/목성.jpg");
+}
+
+.blog_title{
+
+    background-color: teal;
+    padding: 8px;
+    color: white;
+    cursor: pointer;
+}
+
+.blog_title:hover{
+
+    color: navy;
+}
+
+
+.blog_text {
+    padding: 8px;
+}
+
+footer {
+
+    background-color: violet;
+    text-align: center;
+    padding: 8px;
+    color: purple;
+}
