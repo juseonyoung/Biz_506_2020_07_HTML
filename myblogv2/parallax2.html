@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Page Title</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+
+        }
+
+        html,body{
+            height: 100%;
+
+        }
+
+        section{
+            height: 100%;
+            width: 700%;
+            display: flex;
+
+        }
+
+         div{
+            width: 100%;
+            height: 100%;
+        }
+
+        div:nth-child(odd){ 
+            background-color: cadetblue;
+        }
+
+        div:nth-child(even){
+            background-color: purple;
+        }
+
+        div:nth-child(1){
+            background-image: url("images/fall-1072821.jpg");
+            background-image: url("images/road-1072823.jpg");
+            background-image: url("images/road-4143370.jpg");
+            
+            background-image: url("images/tree-736885.jpg");
+            background-image: url("images/tree-832079.jpg");
+            background-image: url("images/목성.jpg");
+            background-image: url("images/스위스.png");
+         
+        }
+
+
+        div:nth-child(1){  background-image: url("images/fall-1072821.jpg"); }
+        div:nth-child(2){    background-image: url("images/road-1072823.jpg"); }
+        div:nth-child(3){   background-image: url("images/road-4143370.jpg");
+             }
+        div:nth-child(4){    background-image: url("images/tree-736885.jpg"); }
+        div:nth-child(5){   background-image: url("images/tree-832079.jpg"); }
+        div:nth-child(6){        background-image: url("images/목성.jpg");}
+        div:nth-child(7){ background-image: url("images/스위스.png");
+          }
+
+        div{
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: 100%;
+            background-attachment: fixed;
+        }
+        
+
+    </style>
+</head>
+<body>
+    <section>
+        <div>1</div>
+        <div>2</div>
+        <div>3</div>
+        <div>4</div>
+        <div>5</div>
+  
+    </section>
+</body>
+</html>
