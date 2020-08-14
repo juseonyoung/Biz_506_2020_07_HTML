@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>
+        
+    </title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+ 
+    <style>
+        input{
+            display: block;
+            width: 80%;
+
+        }
+
+        button{
+            background-color: goldenrod
+        }
+    </style>
+</head>
+<body>
+    <form action="writer">
+    <input type="text" placeholder="이름을 입력하세요">
+    <input type="text" placeholder="id를 입력하세요(5글자 이상)">
+    <input type="password" placeholder="패스워드를 입력하세요(5자 이상)"> <!--비밀번호 안보이게 !!-->
+    <input type="date">
+    <input type="datetime-local">
+    <input type="number">
+    <input type="email">
+    <input type="phone">
+    <input type="range">
+    
+    <button type="button" onclick="save()">저장</button> <!--이 부분 있어야 클릭버튼이 제 기능 안하게됨-->
+    </form>
+
+    <script>
+        function save() {
+            var name = document.getElementsByTagName("input")[0].value
+            var userid = document.getElementsByTagName("input")[1].value
+            var password = document.getElementsByTagName("input")[2].value
+
+            // 0번 input 박스에 값이 입력되지 않았으면 
+            if(name == ""){
+                alert("이름은 반드시 입력해야 합니다")
+
+                // 입력 cursor를 박스로 옮기고 
+                document.getElementsByTagName("input")[0].focus()
+
+                // 더 이상 코드 진행하지 말라 
+                return false
+            }
+            
+            if(userid.length<5) {
+                alert("사용자 ID는 5글자 이상입니다.")
+                document.getElementsByTagName("input")[1].focus()
+                return false
+            }
+
+            if(password.length<5) {
+                alert("비밀번호는 5글자 이상입니다.")
+                document.getElementsByTagName("input")[2].focus()
+                return false
+            }
+            alert("저장하러 갑니다") //폼에 강제로 저장
+            document.getElementsByTagName("form")[0].submit()
+
+        }
+
+    </script>
+
+</body>
+</html>
