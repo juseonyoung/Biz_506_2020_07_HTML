@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>Page Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <style>
+      section {
+        display: flex;
+      }
+
+      div {
+        border: 3px solid black;
+        color: yellowgreen;
+        height: 200px;
+        background-color: rgb(185, 230, 97);
+      }
+
+      section div {
+        width: 30%;
+        margin: 10px;
+      }
+
+      /*
+      position
+      tag들을 사용하면 전체적으로 표준적인 특성에 따라서 위치들은 자동으로 조절이 된다. 
+      static(정적, 고정) 상태
+      모든 태그 요소들은 position:static 같은 특성을 갖는다.
+
+      relative 
+      tag가 그려지는 위치를 임의로 지정할 수 있다. 
+      */
+
+      .relative {
+        position: relative;
+        top: 50px;
+      }
+
+      .relative.back {
+        z-index: -1;
+      }
+
+      .relative.front {
+        z-index: 10;
+      }
+
+      /*
+      absoulte란 포지션이 지정된 다른 태그와 상대적이 위치 지정
+      만약 감싸고 있는 부모 태그에 position이 없는 경우에는 body를 기준으로 설정되어
+      위치가 지정된다. 
+      */
+      .abs {
+        top: 30px;
+        left: 30px;
+        position: absolute;
+        background-color: cornflowerblue;
+        color: black;
+      }
+
+      .abs.green {
+        background-color: violet;
+      }
+    </style>
+  </head>
+  <body>
+    <section>
+      <div class="relative back"></div>
+      <div class="relative front"></div>
+      <div class="relative front">
+        <div class="abs">
+          relative box 안에서 abs로 지정되고 section이 flex로 된 상태에서
+          width가 30%로 지정
+        </div>
+      </div>
+      <div class="abs green">
+        감싸고 있는 부모 태그가 section이고, position이 지정되지 않은 상태이며
+        section 이 flex인상태 flex box 내부에 있다(flex item 이다) width 30%;
+      </div>
+    </section>
+    <div></div>
+  </body>
+</html>
