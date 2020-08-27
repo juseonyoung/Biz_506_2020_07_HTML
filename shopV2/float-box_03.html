@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      article {
+        background-color: dodgerblue;
+        border: 4px dotted black;
+        /*height: 50px;*/
+      }
+
+      /*
+      css3의 가상클래스(태그,객체)를 사용하는 방법*/
+      article::after {
+        content: "";
+        clear: both;
+        display: block;
+      }
+
+      article:after {
+        content: "";
+        clear: both;
+        display: block;
+      }
+
+      div {
+        border: 1px solid blue;
+        margin: 10px;
+        width: 100px;
+        /*아이템 박스를 float 설정하는 순간 부모박스는 아이템들을 인식하지 못하여 아무것도 없는 상태라고 생각해버린다.*/
+      }
+      div.float {
+        float: left; /*float 복원하면 article은 내부에 있는 박스를 인식 못한다*/
+      }
+    </style>
+  </head>
+  <body>
+    <article>
+      <div class="float">가</div>
+      <div class="float">나</div>
+      <div class="float">다</div>
+      <div class="float">라</div>
+      <div class="float">마</div>
+    </article>
+  </body>
+</html>
