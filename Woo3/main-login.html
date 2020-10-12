@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        
+
+    <script src="http://code.jquery.com/jquery-latest.js"></script>    
+    <script src="https://code.jquery.com/jquery-latest.min.js"></script>
+    <script
+    src="https://kit.fontawesome.com/2d323a629b.js"
+    crossorigin="anonymous"
+  ></script>
+
+    <link href="static/css/Main.css" rel="stylesheet"/>
+    <link href="static/css/login_modal.css" rel="stylesheet"/>
+    
+    <script src="static/js/nav.js" defer></script>
+    <script src="static/js/modal-index.js" defer></script>
+
+
+    <title>환영합니다</title>
+  </head>
+  <body>
+  <section id="login_modal">
+    <article id="login_body">
+    <div class="hero" >
+      <div id="form-box" class="form-box">
+        <div class="button-box">
+            <div id="btn"></div>
+                <button type="button" class="toggle-btn" onclick="login()">
+                Log In
+                </button>
+                <button type="button" class="toggle-btn" onclick="register()">
+                 Register
+                </button>
+        </div>
+        <div class="icon">
+          <ul>
+               <p><i class="fab fa-twitter"></i></p>
+               <p><i class="fab fa-facebook-f"></i></p>
+                <p><i class="fab fa-google"></i></p>
+              </ul>
+        </div>
+      <form id="login" class="input-group">
+            <input type="text" class="input-field" placeholder="아이디를 입력하세요" required />
+            <input
+          type="text"
+          class="input-field"
+          placeholder="비밀번호를 입력하세요"
+          required
+        />
+        <input type="checkbox" class="check-box" />
+        <span>아이디 저장하기</span>
+        
+        <button id ="btn_login" type="submit" class="submit-btn">Log in</button>
+      </form>
+      <form id="register" class="input-group">
+        <input type="text" class="input-field" placeholder="가입하실 아이디를 적어주세요" required />
+        <input type="email" class="input-field" placeholder="이메일을 적어주세요" required />
+        <input
+          type="text"
+          class="input-field"
+          placeholder="비밀번호를 적어주세요"
+          required
+        />
+        <input type="checkbox" class="check-box" /><span
+          >약관에 동의합니다</span
+        >
+        <button id="btn_resister" type="submit" class="submit-btn">Register</button>
+      </form>
+    </div>
+  </article>
+  </section>
+
+
+
+    <script>
+      var x = document.getElementById("login");
+      var y = document.getElementById("register");
+      var z = document.getElementById("btn");
+
+      function register() {
+        x.style.left = "-400px";
+        y.style.left = "50px";
+        z.style.left = "110px";
+      }
+      function login() {
+        x.style.left = "50px";
+        y.style.left = "450px";
+        z.style.left = "0px";
+      }
+    </script>
+    <div class="hoverbox">
+        <div class="screen">
+        <div class="hud01"><img src="static/img/hover01.png" /></div>
+        <div class="hud02"><img src="static/img/hover02.png" /></div>
+        <div class="hud03"><img src="static/img/hover03.png" /></div>
+        <div class="hud04"><img src="static/img/hover04.png" /></div>
+        <div class="hud05"><img src="static/img/hover05.png" /></div>
+        <div class="hud06"><img src="static/img/background-deco01.png" /></div>
+        <div class="hud07"><a href="/map.html"><img src="static/img/start.png" /></a></div>
+        </div>
+    </div>
+  </body>
+</html>
